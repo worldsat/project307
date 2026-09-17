@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;font-family:'Plus Jakarta Sans',sans-serif;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+@media (min-width: 640px) {
+  body {
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+  }
+  .app-viewport {
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #faf8ff;
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
+  }
+  header.fixed, nav.fixed, aside.fixed {
+    max-width: 430px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-primary-fixed-variant': '#920028', 'surface-variant': '#dae2fd', 'on-tertiary-fixed': '#40000d', 'on-tertiary-fixed-variant': '#92002a', 'secondary-container': '#fd761a', 'on-secondary-container': '#5c2400', 'tertiary': '#b70438', 'inverse-primary': '#ffb3b6', 'on-tertiary-container': '#fffaf9', 'inverse-surface': '#283044', 'on-tertiary': '#ffffff', 'background': '#faf8ff', 'secondary': '#9d4300', 'on-secondary-fixed': '#341100', 'surface-bright': '#faf8ff', 'primary-container': '#e11d48', 'on-primary-container': '#fffaf9', 'outline': '#906f70', 'on-secondary-fixed-variant': '#783200', 'surface': '#faf8ff', 'error-container': '#ffdad6', 'outline-variant': '#e5bdbe', 'on-background': '#131b2e', 'tertiary-fixed-dim': '#ffb2b7', 'tertiary-container': '#db2b4e', 'surface-container-low': '#f2f3ff', 'on-secondary': '#ffffff', 'surface-dim': '#d2d9f4', 'tertiary-fixed': '#ffdadb', 'on-error': '#ffffff', 'secondary-fixed': '#ffdbca', 'on-surface': '#131b2e', 'primary-fixed': '#ffdada', 'primary-fixed-dim': '#ffb3b6', 'surface-container-highest': '#dae2fd', 'primary': '#b80035', 'surface-tint': '#be0037', 'inverse-on-surface': '#eef0ff', 'surface-container-high': '#e2e7ff', 'on-primary': '#ffffff', 'on-surface-variant': '#5c3f40', 'on-primary-fixed': '#40000c', 'surface-container': '#eaedff', 'error': '#ba1a1a', 'secondary-fixed-dim': '#ffb690', 'on-error-container': '#93000a', 'surface-container-lowest': '#ffffff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-xs': '0.25rem', 'space-xl': '1.75rem', 'space-sm': '0.5rem', 'gutter-sm': '0.75rem', 'space-md': '1rem', 'margin-md': '1.25rem', 'margin': '1rem', 'gutter': '1rem', 'space-lg': '1.25rem' }, fontFamily: { 'headline-lg-mobile': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'], 'price-display': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'headline-xl': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'], 'caption': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'headline-xl-mobile': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'] }, fontSize: { 'headline-lg-mobile': ['22px', {'lineHeight': '30px', 'letterSpacing': '0em', 'fontWeight': '700'}], 'title-md': ['17px', {'lineHeight': '24px', 'fontWeight': '600'}], 'price-display': ['18px', {'lineHeight': '24px', 'letterSpacing': '-0.01em', 'fontWeight': '800'}], 'headline-lg': ['28px', {'lineHeight': '36px', 'letterSpacing': '-0.01em', 'fontWeight': '700'}], 'headline-xl': ['36px', {'lineHeight': '44px', 'letterSpacing': '-0.02em', 'fontWeight': '800'}], 'headline-md': ['20px', {'lineHeight': '28px', 'fontWeight': '700'}], 'caption': ['11px', {'lineHeight': '14px', 'fontWeight': '500'}], 'body-md': ['14px', {'lineHeight': '22px', 'fontWeight': '400'}], 'headline-xl-mobile': ['28px', {'lineHeight': '36px', 'letterSpacing': '-0.01em', 'fontWeight': '800'}], 'body-lg': ['16px', {'lineHeight': '26px', 'fontWeight': '400'}], 'label-lg': ['14px', {'lineHeight': '20px', 'fontWeight': '600'}], 'label-md': ['12px', {'lineHeight': '16px', 'fontWeight': '600'}] } } } };</script></head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="app-viewport flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">local_mall</span></div><span class="font-title-md text-title-md text-primary font-bold tracking-tight">Profile</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="images/user_avatar.jpg"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-6 gap-space-md">
+<!-- Profile Header Card -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary-fixed/25 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-28 h-28 bg-secondary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="relative flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img alt="Sara Mohammadi" class="w-16 h-16 rounded-full object-cover shadow-sm ring-0" src="images/user_avatar.jpg"/>
+<span class="absolute bottom-0 right-0 bg-secondary-container text-on-secondary-container w-5 h-5 rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center flex-wrap gap-space-xs mb-1">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Sara Mohammadi</h2>
+<span class="inline-flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full font-caption text-caption shadow-xs">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+            Gold Member ★
+          </span>
+</div>
+<p class="font-label-md text-label-md text-outline truncate">+1 (555) 345-6789 / sara@example.com</p>
+</div>
+<button aria-label="Edit Profile" class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Wallet & Loyalty Widget -->
+<div class="grid grid-cols-3 gap-gutter-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<!-- Wallet -->
+<div class="flex flex-col items-center justify-between p-space-xs bg-surface-container-low rounded-lg text-center relative overflow-hidden group">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+<span class="font-caption text-caption text-outline mb-0.5">Wallet</span>
+<div class="flex items-baseline gap-0.5 mb-2">
+<span class="font-price-display text-price-display text-on-surface">$380.00</span>
+</div>
+<button class="w-full py-1 px-1 bg-primary-container text-on-primary font-label-md text-label-md rounded-full flex items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[14px]">add</span>
+        Top Up
+      </button>
+</div>
+<!-- Club Points -->
+<div class="flex flex-col items-center justify-between p-space-xs bg-surface-container-low rounded-lg text-center">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary/10 text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<span class="font-caption text-caption text-outline mb-0.5">Reward Club</span>
+<div class="flex items-baseline gap-0.5 mb-2">
+<span class="font-price-display text-price-display text-on-surface">1,450</span>
+<span class="font-caption text-caption text-outline">Pts</span>
+</div>
+<a class="w-full py-1 px-1 bg-surface text-on-surface-variant font-label-md text-label-md rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" href="#">
+        Redeem Rewards
+      </a>
+</div>
+<!-- Discount Vouchers -->
+<div class="flex flex-col items-center justify-between p-space-xs bg-surface-container-low rounded-lg text-center">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-tertiary/10 text-tertiary mb-1">
+<span class="material-symbols-outlined text-[18px]">local_activity</span>
+</div>
+<span class="font-caption text-caption text-outline mb-0.5">Active Coupons</span>
+<div class="flex items-baseline gap-0.5 mb-2">
+<span class="font-price-display text-price-display text-primary">3</span>
+<span class="font-caption text-caption text-outline">Coupons</span>
+</div>
+<a class="w-full py-1 px-1 bg-surface text-on-surface-variant font-label-md text-label-md rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" href="#">
+        View All
+      </a>
+</div>
+</div>
+<!-- Orders Status Overview -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-4 bg-primary rounded-full"></span>
+<h3 class="font-title-md text-title-md text-on-surface">My Orders</h3>
+</div>
+<a class="font-label-md text-label-md text-primary flex items-center gap-0.5 hover:opacity-80" href="#">
+        View All
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-4 gap-gutter-sm text-center">
+<!-- Active Orders -->
+<a class="flex flex-col items-center group" href="#">
+<div class="relative w-12 h-12 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center mb-1.5 transition-transform group-active:scale-95">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+<span class="absolute -top-1 -right-1 bg-primary-container text-on-primary text-caption font-caption w-4 h-4 rounded-full flex items-center justify-center">1</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Processing</span>
+<span class="font-caption text-caption text-outline mt-0.5">1 active</span>
+</a>
+<!-- Delivered -->
+<a class="flex flex-col items-center group" href="#">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center mb-1.5 transition-transform group-active:scale-95">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Delivered</span>
+<span class="font-caption text-caption text-outline mt-0.5">24 orders</span>
+</a>
+<!-- Cancelled -->
+<a class="flex flex-col items-center group" href="#">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center mb-1.5 transition-transform group-active:scale-95">
+<span class="material-symbols-outlined text-[24px]">cancel</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Cancelled</span>
+<span class="font-caption text-caption text-outline mt-0.5">2 orders</span>
+</a>
+<!-- Returned -->
+<a class="flex flex-col items-center group" href="#">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center mb-1.5 transition-transform group-active:scale-95">
+<span class="material-symbols-outlined text-[24px]">replay</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Returned</span>
+<span class="font-caption text-caption text-outline mt-0.5">0 orders</span>
+</a>
+</div>
+<!-- Active Delivery Mini Banner -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[20px]">package_2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface truncate">Order #348902</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="font-caption text-caption text-secondary">Arriving Tomorrow</span>
+</div>
+<span class="font-caption text-caption text-outline truncate">In transit from sorting facility</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px] shrink-0">chevron_right</span>
+</div>
+</div>
+<!-- Account Navigation Menu -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="flex flex-col">
+<!-- Item: Orders History -->
+<a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Order History</span>
+<span class="font-caption text-caption text-outline">Track packages and receipts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">chevron_right</span>
+</a>
+<!-- Item: Wishlist -->
+<a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Wishlist &amp; Saved Items</span>
+<span class="px-1.5 py-0.5 bg-surface-container-highest text-on-surface-variant rounded font-caption text-caption">12 items</span>
+</div>
+<span class="font-caption text-caption text-outline">Saved products and in-stock alerts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">chevron_right</span>
+</a>
+<!-- Item: Addresses -->
+<a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Shipping Addresses</span>
+<span class="font-caption text-caption text-outline">Manage delivery addresses</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">chevron_right</span>
+</a>
+<!-- Item: Messages & Notifications -->
+<a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-md">
+<div class="relative w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">mail</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Messages &amp; Alerts</span>
+<span class="px-1.5 py-0.5 bg-primary-fixed text-on-primary-fixed rounded font-caption text-caption">2 new</span>
+</div>
+<span class="font-caption text-caption text-outline">Discounts, updates, and account status</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">chevron_right</span>
+</a>
+<!-- Item: Support & FAQ -->
+<a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Help &amp; Customer Support</span>
+<span class="font-caption text-caption text-outline">24/7 online support</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">chevron_right</span>
+</a>
+<!-- Item: Settings & Security -->
+<a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Account &amp; Privacy Settings</span>
+<span class="font-caption text-caption text-outline">Password, security, active sessions</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Logout Action -->
+<button class="w-full h-12 bg-error-container/60 text-error font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-space-sm hover:bg-error-container active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span>Log Out of Account</span>
+</button>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_10px_25px_-4px_rgba(15,23,42,0.08),0_4px_10px_-2px_rgba(225,29,72,0.05)]" data-active-classes="text-primary-container font-bold"><div class="h-20 px-space-sm flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all" data-path="home" href="home.html"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-md text-label-md mt-1">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all" data-path="categories" href="categories.html"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-md text-label-md mt-1">Categories</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all" data-path="cart" href="cart.html"><div class="relative"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-primary-container text-on-primary font-caption text-caption rounded-full h-4 min-w-[16px] px-1 flex items-center justify-center">2</span></div><span class="font-label-md text-label-md mt-1">Cart</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-14 rounded-xl transition-all text-primary-container font-bold" data-path="profile" href="profile.html"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-md text-label-md mt-1">Profile</span></a></div></nav></div>
+</body></html>
